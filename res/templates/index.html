@@ -1,0 +1,44 @@
+<%inherit file="template.html"/>
+<%doc> début de ce qui va être le "self.body()" ...  </%doc>
+
+<section class="home">
+    <div class="home-content">
+        <h1>Swim Easy</h1>
+        <h3>Le site pour les amateurs de natation</h3>
+        <p>Différentes pages sont mises à votre disposition afin de vous 
+            renseignez sur les diverses piscines en France. Vous pouvez
+            aussi retrouver des avis concernant les piscines qu'on a pu
+            fréquenter, puis il y'a l'espace rendez-vous. Vous pouvez
+            proposer de vous rassembler à plusieurs pour vous entrainez
+            en groupe.</p>
+            <div class="btn-box">
+                <a href="affPiscines">Piscines</a>
+                <a href="affAvis">Avis</a>
+            </div>
+    </div> 
+</section>
+<div id="slider">
+    <input type="radio" name="slider" id="s1" checked />
+    <input type="radio" name="slider" id="s2" />
+    <input type="radio" name="slider" id="s3" />
+    <input type="radio" name="slider" id="s4" />
+    <input type="radio" name="slider" id="s5" />
+    <label for="s1" id="slide1">
+        <img src="/static/img/pisc1.png" alt="piscine1">
+    </label>
+    <label for="s2" id="slide2">
+        <img src="/static/img/pisc2.png" alt="piscine2">
+    </label>
+    <label for="s3" id="slide3">
+        <img src="/static/img/pisc3.png" alt="piscine3">
+    </label>
+    <label for="s4" id="slide4">
+        <img src="/static/img/pisc4.png" alt="piscine4">
+    </label>
+    <label for="s5" id="slide5">
+        <img src="/static/img/pisc5.png" alt="piscine5">
+    </label>
+</div>
+
+<%doc> fin de ce qui va être le "self.body()" ...  </%doc>
+

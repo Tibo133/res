@@ -1,0 +1,849 @@
+/* css du template */
+
+:root{
+	--main-color : #00abf0;
+	--second-bg-color : #005070;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Verdana', 'sans-serif';
+}
+
+body {
+	background-image: url("../img/wall.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    padding: 0px;
+	color : #ededed;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 40px 100px;
+	background: transparent;
+	display : flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+	transition : 0.6s;
+}
+
+header.sticky{
+	padding : 5px 100px;
+	background : #ffffff
+}
+
+header.sticky .logo,
+header.sticky ul li a{
+	color : #000;
+}
+
+header .logo{
+	position : relative;
+	font-size: 25px;
+	color: #ededed;
+	text-decoration: none;
+	font-weight: 600;
+	letter-spacing: 2px;
+	transition: 0.6s;
+}
+
+header ul{
+	position : relative;
+	display : flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header ul li{
+	position: relative;
+	list-style: none; 
+}
+
+header ul li a{
+	position : relative;
+	margin : 0 15px;
+	letter-spacing: 2px;
+}
+
+header.sticky
+
+.logo::before{
+	content : '';
+	position : absolute;
+	top : 0;
+	right : 0;
+	width : 100%;
+	height : 100%;
+	background : #fff;
+	animation : showRight 1s ease forwards;
+	animation-delay : .4s;
+}
+
+.navbar a {
+	font-size : 18px;
+	color : #ededed;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 35px;
+	transition : .3s;
+}
+
+.navbar a:hover,
+.nav-link.active{
+	color : #00abf0;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+  }
+  
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	background-color:#081b29;
+	min-width: 200px;
+	padding: 10px;
+	z-index: 1;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+.dropdown-menu li {
+	margin-bottom: 10px;
+  }
+  
+.navbar ul li ul li a {
+	font-size: 14px;
+	color : white;
+  }
+  
+.dropdown-menu li a {
+	display: block;
+	color: #000;
+	text-decoration: none;
+	transition: color 0.3s;
+  }
+  
+.dropdown-menu li a:hover {
+	color: #00abf0;
+  }
+
+#sujet {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+footer{
+	flex-shrink: 0;
+	padding: 40px 0;
+	background-color: #fff;
+}
+
+footer .social{
+	text-align : center;
+	padding-bottom: 25px;
+	color : #272727
+}
+
+footer .social img{
+	width : 40px;
+	height : 40px;
+}
+
+footer .social a{
+	font-size : 24px;
+	color : inherit;
+	border : 1px solid #ccc;
+	width : 40px;
+	height : 40px;
+	Line-height : 38px;
+	display : inline-block;
+	text-align : center;
+	border-radius : 50%;
+	margin : 0 8px;
+	opacity : 0.75;
+}
+
+footer .social a:hover{
+	opacity : 0.9;
+}
+
+footer ul{
+	margin-top : 0;
+	padding : 0;
+	list-style : none;
+	font-size : 18px;
+	line-height : 1.6;
+	margin-bottom:0;
+	text-align: center;
+}
+
+footer ul li a{
+	color : #4572e5;
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+footer ul li{
+	display : inline-block;
+	padding : 0 15px;
+}
+
+footer ul li a:hover{
+	opacity: 1;
+}
+
+footer .copyright {
+	margin-top : 15px;
+	text-align : center;
+	font-size : 13px;
+	color : #474747;
+}
+
+
+  
+
+
+
+
+
+
+
+/* CSS de l'index */
+
+.home {
+	height: 100vh;
+	display : flex;
+	align-items: center;
+	padding : 0 10%;
+}
+
+.home-content{
+	max-width : 600px;
+}
+
+.home-content h1{
+	font-size : 56px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.home-content H3{
+	font-size: 32px;
+	font-weight: 700;
+	color : #00abf0 
+}
+
+.home-content p{
+	font-size: 16px;
+	margin: 20px 0 40px;
+}
+
+.home-content .btn-box{ 
+	display: flex;
+	justify-content: space-between;
+	width: 345px;
+	height: 50px;
+}
+
+.btn-box a{
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width : 150px;
+	height : 100%;
+	background: #00abf0;
+	border: 2px solid #00abf0;
+	border-radius: 8px;
+	font-size: 19px;
+	color : #081b29;
+	text-decoration: none;
+	font-weight: 600;
+	letter-spacing: 1px;
+	z-index: 1;
+	overflow: hidden;
+	transition: .5s;
+}
+
+.btn-box a:hover{
+	color: #00abf0;
+}
+
+.btn-box a:nth-child(2){
+	background : transparent;
+	color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover{
+	color: #081b29
+}
+
+.btn-box a:nth-child(2)::before{
+	background: #00abf0;
+}
+
+.btn-box a::before{
+	content : '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0; 
+	height: 100%;
+	background: #081b29;
+	z-index: -1;
+	transition: .5s;
+}
+
+.btn-box a:hover::before{
+	width: 100%
+}
+
+#slider{
+	position : relative;
+	width : 50%;
+	height : 32vw;
+	margin : 80px auto;
+	transform-style : preserve-3d;
+	perspective: 1400px;
+}
+
+input[type="radio"]{
+	position : relative;
+	top : 108%;
+	left : 50%;
+	width : 18px;
+	height : 18px;
+	margin : 0 15px 0 0;
+	transform: translateX(-83px);
+	cursor : pointer;
+	opacity: 0.4;
+}
+
+input[type="radio"]:nth-child(5){
+	margin-left: 0px;
+}
+
+input[type="radio"]:checked{
+	opacity: 1;
+}
+
+#slider label,
+#slider label img{
+	display : flex;
+	position : absolute;
+	top : 0;
+	left : 0;
+	align-items : center;
+	justify-content: center;
+	width : 100%;
+	height : 100%;
+	border-radius : 3px;
+	color : white;
+	font-size : 70px;
+	font-weight: bold;
+	cursor : pointer;
+	transition : transform 400ms ease;
+}
+
+/*Active Slider*/
+#s1:checked ~ #slide1,
+#s2:checked ~ #slide2,
+#s3:checked ~ #slide3,
+#s4:checked ~ #slide4,
+#s5:checked ~ #slide5{
+	transform : translate3d(0%, 0, 0px);
+	box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Next slide */
+#s1:checked ~ #slide2,
+#s2:checked ~ #slide3,
+#s3:checked ~ #slide4,
+#s4:checked ~ #slide5,
+#s5:checked ~ #slide1{
+	transform: translate3d(20%, 0, -100px);
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Previous slide */
+#s1:checked ~ #slide5,
+#s2:checked ~ #slide1,
+#s3:checked ~ #slide2,
+#s4:checked ~ #slide3,
+#s5:checked ~ #slide4{
+	transform: translate3d(-20%, 0, -100px);
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Next to Next Slide */
+#s1:checked ~ #slide3,
+#s2:checked ~ #slide4,
+#s3:checked ~ #slide5,
+#s4:checked ~ #slide1,
+#s5:checked ~ #slide2{
+	transform : translate3d(40%, 0, -250px);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Previous to Previous Slide*/
+#s1:checked ~ #slide4,
+#s2:checked ~ #slide5,
+#s3:checked ~ #slide1,
+#s4:checked ~ #slide2,
+#s5:checked ~ #slide3{
+	transform: translate3d(-40%, 0, -250px);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes showRight{
+	100%{
+		width : 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/* CSS de l'affichage */
+.home3 {
+	display : flex;
+	padding : 0 15%;
+	margin-bottom: 10%;
+}
+
+.blocus{
+	margin-bottom: 10%;
+}
+
+.home-content3 h3{
+	font-size : 30px;
+	padding-top : 20%;
+	color :#00abf0
+}
+
+.heading-container {
+	text-align: center; 
+	margin-bottom: 10px; 
+}
+
+.content-container {
+	text-align: center;
+}
+
+.pool-item {
+	display: inline-block;
+	padding: 5px;
+	margin: 5px;
+	background-color:rgba(17, 75, 117, 0.8); 
+	border-radius: 5px;
+}
+
+.pool-item2 {
+	justify-content: center;
+	align-items: center;
+	background-color:rgba(17, 75, 117, 0.8); 
+	border-radius: 5px;
+	margin : 10px;
+	font-size: xx-large;
+  }
+
+.barrecenter form {
+	display: flex;
+	align-items: center;
+  }
+  
+.barrecenter  input[type="text"] {
+	padding: 8px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-right: 5px;
+  }
+  
+.barrecenter  button[type="submit"] {
+	padding: 8px 16px;
+	font-size: 16px;
+	background-color: #4c91af;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* CSS de l'insertion des piscines */
+
+.home2{
+	padding-top: 8%;
+}
+
+.home4{
+	padding-top: 2% ;
+}
+
+.insert{
+	display : flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container{
+	width : 100%;
+	max-width: 650px;
+	background : rgba(0, 0, 0, 0.5);
+	padding : 28px;
+	margin : 0 140px;
+	border-radius : 10px;
+	box-shadow : inset -2px 2px 2px white;
+}
+
+.form-title{
+	font-size : 26px;
+	font-weight : 600;
+	text-align : center;
+	padding-bottom : 6px;
+	color : white;
+	text-shadow : 2px 2px 2px black;
+	border-bottom : solid 1px white;
+}
+
+.main-user-info{
+	display : flex;
+	flex-wrap : wrap;
+	justify-content: space-between;
+	padding: 20px 0;
+}
+
+.user-input-box:nth-child(2n){
+	justify-content : end;
+}
+
+.user-input-box{
+	display : flex;
+	flex-wrap : wrap;
+	width : 50%;
+	padding-bottom : 15px;
+}
+
+.user-input-box label{
+	width: 95%;
+	color : white;
+	font-size : 20px;
+	font-weight : 400;
+	margin : 5px 0;
+}
+
+.user-input-box input{
+	height: 40px;
+	width: 95%;
+	border-radius: 7px;
+	outline: none;
+	border : 1px solid grey;
+	padding : 0 10px;
+}
+
+.form-submit-btn{
+	margin-top: 40px;
+}
+
+.form-submit-btn input{
+	display : block;
+	width : 100%;
+	margin-top : 10px;
+	font-size : 20px;
+	padding: 10px;
+	border : none;
+	border-radius : 3px;
+	color : rgb(209, 209, 209);
+	background : rgba(30, 154, 255, 0.7);
+}
+
+.form-submit-btn input:hover{
+	background : rgba(1, 149, 198, 0.7);
+	color : rgb(255, 255, 255);
+}
+
+@media(max-width : 600px){
+	.container{
+		min-width: 280px;
+	}
+
+	.user-input-box{
+		margin-bottom: 12px;
+		width : 100%;
+	}
+
+	.user-input-box:nth-child(2n){
+		justify-content: space-between;
+	}
+
+	.main-user-info{
+		max-height: 380px;
+		overflow: auto;
+	}
+}
+
+.home-content2{
+	align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CSS de l'insertion des piscines et des avis */
+
+.form-box{
+	position : relative;
+	width : 400px;
+	height : 450px;
+	background : transparent ;
+	border : 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+	backdrop-filter: blur(15px);
+	display : flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inputbox{
+	position : relative;
+	margin : 30px 0;
+	width : 310px;
+	border-bottom: 2px solid #fff;
+}
+
+.inputbox label{
+	position : absolute;
+	top : 50%;
+	left : 5px;
+	transform : translateY(-50%);
+	color : #fff;
+	font-size : 1em;
+	pointer-events: none;
+	transition: .5s;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+	top : -5px;
+}
+
+.inputbox input{
+	width : 100%;
+	height : 50px;
+	background: transparent;
+	border : none;
+	outline: none;
+	font-size : 1em;
+	padding: 0 35px 0 5px;
+	color : #fff;
+}
+
+.danger {
+	color: red;
+	text-align: center;
+  }
+
+ 
+
+/* Partie administration */
+/* Home menu */
+
+.homelogin {
+	display : flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width : 100%;
+}
+
+.homelogin h2{
+	font-size : 1.5em;
+	color : #fff;
+	text-align: center;
+}
+
+.pageAdmin{
+	margin-top: 15%;
+}
+
+.heading{
+	font-size: 50px;
+	padding-bottom: 25%;
+}
+
+.education{
+	display : flex;
+	justify-content :center;
+	align-items : center;
+	flex-direction : column;
+	min-height : auto;
+	padding-top : 5rem;
+}
+
+.education span{
+	color :rgba(92, 209, 248)
+}
+
+.education .education-row{
+	display: flex;
+	flex-wrap: wrap;
+	gap : 5rem;
+}
+
+.homelogin button{
+	width : 100%;
+	height : 40px;
+	border-radius: 40px;
+	background : #fff;
+	border : none;
+	outline: none;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.homelogin button:hover{
+	color :#00abf0;
+}
+
+.education-row .education-column{
+	flex: 1 1 40rem;
+}
+
+.education-column .title{
+	font-size : 2.5rem;
+	margin : 0 0 1.5rem 3rem;
+}
+
+.education-column .education-box{
+	border-left : .2rem solid var(--main-color);
+}
+
+.education-box .education-content{
+	position : relative;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.education-content .content{
+	position : relative;
+	padding : 1.5rem;
+	border : .2rem solid var(--main-color);
+	border-radius: .6rem;
+	margin-bottom: 2rem;
+	overflow: hidden;
+	font-size:medium;
+}
+
+.education-content .content::before{
+	content : '';
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 0;
+	height : 100%;
+	background: var(--second-bg-color);
+	z-index: -1;
+	transition: .5s;
+}
+
+.education-content .content:hover::before{
+	width : 100%;
+}
+
+
+
+
+
+/* CSS pour la page coming soon */
+
+.hero{
+	top : 50%;
+	left : 50%;
+	position : absolute;
+	transform : translate(-50%, -50%);
+	color : #fff;
+	text-align : center;
+}
+
+.hero h1{
+	font-size : 50px;
+	letter-spacing: 15px;
+}
+
+.hr{
+	width : 20%;
+	margin : 10px auto;
+	border : 1.5px solid #fff;
+
+}
+
+.constru{
+	font-size : 20px;
+	margin-bottom : 30px;
+}
+
+.countdown{
+	margin-top: 10%;
+	font-size: 30px;
+}
+
+.blocus2{
+	margin-top: 50%;
+}
+
+
+/* CSS pour la page RDV */
+
+.pool-item {
+	justify-content: center;
+	align-items: center;
+	width : 100%
+  }
+
+.pool-item a{
+	color : white;
+	background-color: #007bff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+	justify-content:space-around;
+}
+
+.pool-item a:hover {
+	background-color: #0056b3;
+  }

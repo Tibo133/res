@@ -1,0 +1,43 @@
+<%inherit file="template.html"/>
+<%doc> début de ce qui va être le "self.body()" ...  </%doc>
+
+<section class="home2">
+        <section class="insert">
+            <br><br><br><br><br>
+            <div class="container">
+                <h1 class="form-title">Participer au rendez-vous</h1>
+                % if message :
+                <p class="message alert alert-${type}">${message}</p>
+                % endif
+                <form action="insertDone4" method="POST" class="needs-validation" novalidate onsubmit="return validateForm()">
+                    <div class="main-user-info">
+
+                        <div class="user-input-box">
+                            <label for="Participant">Pseudo</label>
+                            <input type="text" id="Participant" name="Participant" placeholder="Votre pseudo" rquired>
+                        </div>
+
+                        <div class="user-input-box">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Votre compte mail" rquired>
+                        </div>
+
+                        <div class="user-input-box">
+                            <label for="Niveau">Votre niveau de nage</label>
+                            <input type="text" id="Niveau" name="Niveau" placeholder="Votre niveau" required>
+                        </div>
+                        
+                        <div class="user-input-box">
+                            <label for="RDVID">n° du rendez-vous</label>
+                            <input type="text" id="RDVID" name="RDVID" placeholder="Le rdv" required>
+                        </div>
+
+                        <div class="form-submit-btn">
+                            <input type="submit" value="Participer">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+</section>
+<%doc> fin de ce qui va être le "self.body()" ...  </%doc>

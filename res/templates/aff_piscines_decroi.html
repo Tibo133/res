@@ -1,0 +1,14 @@
+<%inherit file="template.html"/>
+<%doc> début de ce qui va être le "self.body()" ...  </%doc>
+
+<section class="home3">
+	<div class="home-content3">
+		<h3>Liste des piscines</h3>
+		<h2>Bienvenue sur la page qui répertorie toutes les piscines par ordre de tarif décroissant :</h2><br><br><br><br><br>
+		% for e in piscines :
+			<div class="pool-item">${e}</div>
+		% endfor
+	</div>
+</section>
+
+<%doc> fin de ce qui va être le "self.body()" ...  </%doc>

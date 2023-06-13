@@ -1,0 +1,17 @@
+<%inherit file="template.html"/>
+<%doc> début de ce qui va être le "self.body()" ...  </%doc>
+
+<section class="home3">
+	<div class="home-content3">
+		<h3>Liste des Participants</h3>
+		<h2>Bienvenue sur la page qui répertorie toutes les participants avec leurs informations :</h2><br><br><br><br><br>
+		% for participant in participants :
+			<div class="pool-item">
+				<p>Participant: ${participant.participant}</p>
+				<p>Niveau: ${participant.niveau}</p>
+			</div>
+		% endfor
+	</div>
+</section>
+
+<%doc> fin de ce qui va être le "self.body()" ...  </%doc>

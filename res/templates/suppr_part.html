@@ -1,0 +1,24 @@
+<%inherit file="template.html"/>
+<%doc> début de ce qui va être le "self.body()" ...  </%doc>
+
+<section class="home2">
+    <section class="insert">
+        <br><br><br><br><br>
+        <div class="container">
+        <h1 class="form-title">Se désinscrire :</h1>
+        % if message :
+        <p class="message alert alert-${type}">${message}</p>
+        % endif
+        <br><br>
+        <form action="suppressPart" method="POST">
+            <label for="email">Votre adresse mail :</label>
+            <input type="email" class="form-control" placeholder="votre mail" name="email" id="email">
+            <div class="form-submit-btn">
+                <input type="submit" value="Valider">
+            </div>
+        </form>
+        </div>
+    </section>
+</section>
+
+<%doc> fin de ce qui va être le "self.body()" ...  </%doc>

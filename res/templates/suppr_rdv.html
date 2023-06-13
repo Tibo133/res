@@ -1,0 +1,32 @@
+<%inherit file="template.html"/>
+<%doc> début de ce qui va être le "self.body()" ...  </%doc>
+
+<section class="home4">
+    <section class="insert">
+        <br><br><br><br><br>
+        <div class="container">
+        <h1 class="form-title">Suppression d'avis par numéro :</h1>
+        % if message :
+        <p class="message alert alert-${type}">${message}</p>
+        % endif
+        <br><br>
+        <form action="suppressRDV" method="POST">
+            <label for="numPisc">Numéro :</label>
+            <input type="number" class="form-control" placeholder="Numéro du rdv" name="numRDV" id="numRDV" required min="0">
+            <div class="form-submit-btn">
+                <input type="submit" value="Insérer">
+            </div>
+        </form>
+        </div>
+    </section>
+</section>
+<section class="home3">
+	<div class="home-content3">
+		<h3>Tous les rendez-vous présents :</h3><br><br><br><br><br>
+		% for e in rdv :
+			<div class="pool-item">${e}</div>
+		% endfor
+	</div>
+</section>
+
+<%doc> fin de ce qui va être le "self.body()" ...  </%doc>

@@ -1,0 +1,26 @@
+<%inherit file="template.html"/>
+<%doc> début de ce qui va être le "self.body()" ...  </%doc>
+
+<section class="homelogin">
+    <div class="form-box">
+        <div class="form-value">
+            <form method="post" action="/login">
+                <h2>Connexion administration</h2><br>
+                <div class="inputbox">
+                    <input type="text" name="username" required><br>
+                    <label for="">Login</label>
+                </div>
+                <div class="inputbox">
+                    <input type="password" name="password" required><br>
+                    <label for="">Password</label>
+                </div>
+                <button>Se connecter</button>
+                % if message:
+                <br><br><p class="message ${type}">${message}</p>
+                % endif
+            </form>
+        </div>
+    </div>
+</section>
+
+<%doc> fin de ce qui va être le "self.body()" ...  </%doc>

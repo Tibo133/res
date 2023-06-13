@@ -1,0 +1,40 @@
+<%inherit file="template.html"/>
+<%doc> début de ce qui va être le "self.body()" ...  </%doc>
+
+<section class="home3">
+	<div class="home-content3">
+		<div class="barrecenter">
+			<h3>Page des avis</h3>
+			<h2>Bienvenue sur la page qui répertorie et vous permet de rechercher des informations sur les piscines.</h2><br><br>
+			<form id="searchForm">
+				<input type="text" name="search" id="searchInput" placeholder="Rechercher..." />
+				<button type="submit">Rechercher</button>
+			</form>
+		</div>
+		<br><br><br>
+		<div id="searchResult"></div>
+		% for e in avis :
+			<div class="pool-item">${e}</div>
+		% endfor
+	</div>
+</section>
+<script>
+	document.getElementById("searchForm").addEventListener("submit", function(event) {
+		event.preventDefault(); 
+		var searchInput = document.getElementById("searchInput").value.toLowerCase();
+		var poolItems = document.getElementsByClassName("pool-item");
+		for (var i = 0; i < poolItems.length; i++) {
+			var poolItem = poolItems[i];
+			var poolText = poolItem.textContent.toLowerCase();
+			if (poolText.indexOf(searchInput) !== -1) {
+				poolItem.style.display = "block";
+			} else {
+				poolItem.style.display = "none";
+			}
+		}
+	
+		document.getElementById("searchResult").textContent = "";
+	});
+</script>
+
+<%doc> fin de ce qui va être le "self.body()" ...  </%doc>
